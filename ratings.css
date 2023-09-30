@@ -1,0 +1,80 @@
+/* The names labeled with 'stars' are used for the 5 star display */
+.stars-outer {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .stars-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+  }
+  
+  .stars-outer::before {
+    content: "\f005 \f005 \f005 \f005 \f005";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: #ccc;
+  }
+  
+  .stars-inner::before {
+    content: "\f005 \f005 \f005 \f005 \f005";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: #f8ce0b;
+  }
+
+
+  /* This is used for the circle displaying the avgGPA of each course */
+  .circle {
+    width:70px;
+    height:70px;
+    border-radius:35px;
+    font-size:14px;
+    color:rgb(0, 0, 0);
+    line-height:70px;
+    text-align:center;
+    background:#FF3924
+}
+.sortButton {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-family: HelveticaNeue, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: #A81919;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.1s ease-in-out;
+}
+
+.sortButton:hover {
+  background-color: #C51E1E;
+}
+
+.buttonContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.sortButton.toggledOn {
+  background-color: #e66363;
+  color: #fff;
+}
+
+.course-id .see-more-link {
+  display: inline-flex;
+  align-items: center;
+  color: #007bff;
+  padding-top: 20px;
+  line-height: normal;
+}
+.course-id .see-more-link img {
+  vertical-align: middle;
+  max-height: 100%;
+  height: 25px;
+}
+
